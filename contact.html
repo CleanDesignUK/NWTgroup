@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | North Wales Tutoring Group</title>
+  <meta
+    name="description"
+    content="Contact North Wales Tutoring Group to enquire about online tutoring across Wales, England and the UK."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="site-bg"></div>
+
+  <header class="site-header">
+    <div class="container header-inner glass">
+      <a href="index.html" class="brand">
+        <span class="brand-mark">NWTG</span>
+        <span class="brand-text">North Wales Tutoring Group</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="site-nav" class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="blog.html">Blog</a>
+        <a href="franchises.html">Current Franchises</a>
+        <a href="contact.html" class="active btn btn-small">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero section">
+      <div class="container narrow">
+        <p class="eyebrow">Get in touch</p>
+        <h1>Contact North Wales Tutoring Group</h1>
+        <p class="lead centred">
+          Enquire about one-to-one tutoring, group tutoring, subject support, or the wider group.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split-grid">
+        <div class="glass contact-panel">
+          <h2>Send an enquiry</h2>
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-row">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Your full name" required />
+            </div>
+
+            <div class="form-row">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required />
+            </div>
+
+            <div class="form-row">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="Your phone number" />
+            </div>
+
+            <div class="form-row">
+              <label for="student-level">Student Level</label>
+              <select id="student-level" name="student-level" required>
+                <option value="">Please select</option>
+                <option value="primary">Primary</option>
+                <option value="ks3">KS3</option>
+                <option value="gcse">GCSE</option>
+                <option value="a-level">A Level</option>
+                <option value="adult">Adult Learning</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="e.g. Maths, Biology, English" required />
+            </div>
+
+            <div class="form-row">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="6"
+                placeholder="Tell us what support you are looking for"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn">Send Enquiry</button>
+            <p class="form-status" id="formStatus"></p>
+          </form>
+        </div>
+
+        <div class="glass contact-panel">
+          <h2>What to include in your enquiry</h2>
+          <ul class="clean-list">
+            <li>The subject you need support with</li>
+            <li>The student’s level or year group</li>
+            <li>Preferred lesson times</li>
+            <li>Exam board, if relevant</li>
+            <li>Whether you want one-to-one or group tutoring</li>
+          </ul>
+
+          <div class="contact-note">
+            <h3>Coverage</h3>
+            <p>
+              We support students across Wales, England and the UK through online tutoring.
+            </p>
+          </div>
+
+          <div class="contact-note">
+            <h3>Main branch reference</h3>
+            <p>
+              Our strongest current branch is
+              <a class="inline-link" href="https://northwalestutoring.com/" target="_blank" rel="noopener">North Wales Tutoring</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta-section">
+      <div class="container">
+        <div class="cta-box glass">
+          <div>
+            <p class="eyebrow">Also explore</p>
+            <h2>Learn more about the group before you enquire</h2>
+            <p>
+              Visit our blog hub or read more about the current franchises within the group.
+            </p>
+          </div>
+          <div class="cta-actions">
+            <a href="blog.html" class="btn">Visit Blog</a>
+            <a href="franchises.html" class="btn btn-secondary">Current Franchises</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>North Wales Tutoring Group</h3>
+        <p>Online tutoring across Wales, England and the UK.</p>
+      </div>
+
+      <div>
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="franchises.html">Current Franchises</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Main branch</h4>
+        <ul>
+          <li><a href="https://northwalestutoring.com/" target="_blank" rel="noopener">North Wales Tutoring</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
