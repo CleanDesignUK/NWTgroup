@@ -17,315 +17,344 @@
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
-  <div id="site-navbar"></div>
-<main>
-  <section class="hero-home hero-home-form">
-    <div class="container">
-      <div class="hero-grid hero-grid-form">
-        <div class="hero-copy">
-          <p class="hero-kicker"><i class="bi bi-stars"></i> North Wales Tutoring Group</p>
+<div id="site-navbar"></div>
 
-          <h1 class="hero-title hero-title-refined">
-            Online tutoring support and
-            <span class="hero-title-accent">franchise growth</span>
-            across the UK
-          </h1>
+  <div class="top-hero-shell">
+  <main>
+    <section class="hero-home hero-home-form">
+      <div class="container">
+        <div class="hero-grid hero-grid-form">
+          <div class="hero-copy">
+            <p class="hero-kicker"><i class="bi bi-stars"></i> North Wales Tutoring Group</p>
 
-          <p class="hero-subtitle hero-subtitle-refined">
-            Enquire about tutoring, franchise opportunities, or joining our tutor network.
-            We support families, learners and educators across Wales, England and the wider UK.
-          </p>
+            <h1 class="hero-title hero-title-refined">
+              Online tutoring support and
+              <span class="hero-title-accent">franchise growth</span>
+              across the UK
+            </h1>
 
-          <div class="hero-mini-trust">
-            <div class="hero-trust-pill hero-trust-pill-pink">Primary to adult learning</div>
-            <div class="hero-trust-pill hero-trust-pill-violet">One-to-one and group tutoring</div>
-            <div class="hero-trust-pill hero-trust-pill-gold">Franchise and tutor enquiries welcome</div>
+            <p class="hero-subtitle hero-subtitle-refined">
+              Enquire about tutoring, franchise opportunities, or joining our tutor network.
+              We support families, learners and educators across Wales, England and the wider UK.
+            </p>
+
+            <div class="hero-mini-trust">
+              <div class="hero-trust-pill hero-trust-pill-pink">Primary to adult learning</div>
+              <div class="hero-trust-pill hero-trust-pill-violet">One-to-one and group tutoring</div>
+              <div class="hero-trust-pill hero-trust-pill-gold">Franchise and tutor enquiries welcome</div>
+            </div>
           </div>
-        </div>
 
-        <div class="hero-form-wrap">
-          <div class="glass-form-card glass-form-card-hero">
-            <form class="enquiry-form" data-web3form id="heroEnquiryForm">
-              <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
-              <input type="hidden" name="subject" value="New enquiry from North Wales Tutoring Group website">
-              <input type="hidden" name="from_name" value="North Wales Tutoring Group Website">
-              <input type="checkbox" name="botcheck" class="hidden-botcheck" tabindex="-1" autocomplete="off">
+          <div class="hero-form-wrap">
+            <div class="glass-form-card glass-form-card-hero">
+              <form class="enquiry-form" data-web3form id="heroEnquiryForm">
+                <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+                <input type="hidden" name="subject" value="New enquiry from North Wales Tutoring Group website">
+                <input type="hidden" name="from_name" value="North Wales Tutoring Group Website">
+                <input type="checkbox" name="botcheck" class="hidden-botcheck" tabindex="-1" autocomplete="off">
 
-              <div class="form-grid">
-                <div class="form-field">
-                  <label for="hero-full-name">Full name</label>
-                  <input type="text" id="hero-full-name" name="full_name" required>
+                <div class="form-grid">
+                  <div class="form-field">
+                    <label for="hero-full-name">Full name</label>
+                    <input type="text" id="hero-full-name" name="full_name" required>
+                  </div>
+
+                  <div class="form-field">
+                    <label for="hero-email">Email address</label>
+                    <input type="email" id="hero-email" name="email" required>
+                  </div>
+
+                  <div class="form-field">
+                    <label for="hero-phone">Phone number</label>
+                    <input type="tel" id="hero-phone" name="phone" required>
+                  </div>
+
+                  <div class="form-field">
+                    <label for="hero-enquiry-type">Enquiry type</label>
+                    <select id="hero-enquiry-type" name="enquiry_type" required>
+                      <option value="">Please choose</option>
+                      <option value="Tutoring support">Tutoring support</option>
+                      <option value="Franchise information">Franchise information</option>
+                      <option value="Join as a tutor">Want to join as a tutor</option>
+                    </select>
+                  </div>
+
+                  <div class="form-field form-field-full">
+                    <label for="hero-message">Message</label>
+                    <textarea id="hero-message" name="message" rows="4" required></textarea>
+                  </div>
                 </div>
 
-                <div class="form-field">
-                  <label for="hero-email">Email address</label>
-                  <input type="email" id="hero-email" name="email" required>
-                </div>
-
-                <div class="form-field">
-                  <label for="hero-phone">Phone number</label>
-                  <input type="tel" id="hero-phone" name="phone" required>
-                </div>
-
-                <div class="form-field">
-                  <label for="hero-enquiry-type">Enquiry type</label>
-                  <select id="hero-enquiry-type" name="enquiry_type" required>
-                    <option value="">Please choose</option>
-                    <option value="Tutoring support">Tutoring support</option>
-                    <option value="Franchise information">Franchise information</option>
-                    <option value="Join as a tutor">Want to join as a tutor</option>
-                  </select>
-                </div>
-
-                <div class="form-field form-field-full">
-                  <label for="hero-message">Message</label>
-                  <textarea id="hero-message" name="message" rows="4" required></textarea>
-                </div>
-              </div>
-
-              <button type="submit" class="btn form-submit-btn">Start Your Enquiry</button>
-              <p class="form-status" id="heroFormStatus" aria-live="polite"></p>
-            </form>
+                <button type="submit" class="btn form-submit-btn">Start Your Enquiry</button>
+                <p class="form-status" id="heroFormStatus" aria-live="polite"></p>
+              </form>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section intro-band-section">
-    <div class="container">
-      <div class="intro-band">
-        <div class="intro-band-copy">
-          <p class="section-kicker"><i class="bi bi-mortarboard"></i> Accessible tutoring</p>
-          <h2>Accessible tutoring with experienced tutors across the UK</h2>
+    <section class="section intro-band-section">
+      <div class="container">
+        <div class="intro-band">
+          <div class="intro-band-copy">
+            <p class="section-kicker"><i class="bi bi-mortarboard"></i> Accessible tutoring</p>
+            <h2>Accessible tutoring with experienced tutors across the UK</h2>
+            <p>
+              We believe quality tutoring should be accessible to everyone. That is why we work with tutors
+              from a range of professional and academic backgrounds, with different levels of experience and
+              rates to suit different learners.
+            </p>
+          </div>
+
+          <div class="intro-band-points">
+            <div class="intro-point">
+              <i class="bi bi-laptop"></i>
+              <span>Flexible online learning</span>
+            </div>
+            <div class="intro-point">
+              <i class="bi bi-people"></i>
+              <span>Different tutor styles and rates</span>
+            </div>
+            <div class="intro-point">
+              <i class="bi bi-bar-chart-line"></i>
+              <span>Support for progress and confidence</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section spotlight-section">
+      <div class="container">
+        <div class="spotlight-grid">
+          <div class="spotlight-media">
+            <div class="spotlight-image-card">
+              <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80" alt="Students learning together online">
+            </div>
+            <div class="spotlight-badge spotlight-badge-top">
+              <strong>Flexible online support</strong>
+              <span>Designed around level, subject and learning goals</span>
+            </div>
+            <div class="spotlight-badge spotlight-badge-bottom">
+              <strong>Growing UK network</strong>
+              <span>North Wales, Lincolnshire and Cumbria</span>
+            </div>
+          </div>
+
+          <div class="spotlight-copy">
+            <p class="section-kicker"><i class="bi bi-heart"></i> Personalised support</p>
+            <h2>Support shaped around each learner</h2>
+            <p>
+              We match learners with tutors based on subject, level, goals and budget. Whether you are looking
+              for weekly tutoring, exam preparation, tutor work, or franchise information, our network is built
+              to make the process simple, supportive and effective.
+            </p>
+
+            <div class="spotlight-stats">
+              <div class="spotlight-stat spotlight-stat-pink">One-to-one and group tutoring</div>
+              <div class="spotlight-stat spotlight-stat-violet">Support across Wales and the UK</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section learner-path-section">
+      <div class="container">
+        <div class="section-heading centre">
+          <p class="section-kicker"><i class="bi bi-signpost-split"></i> Who we support</p>
+          <h2>Support for every stage of learning</h2>
           <p>
-            We believe quality tutoring should be accessible to everyone. That is why we work with tutors
-            from a range of professional and academic backgrounds, with different levels of experience and
-            rates to suit different learners.
+            We support students and learners at different stages, from building strong foundations early on
+            to preparing for major exams and adult study goals.
           </p>
         </div>
 
-        <div class="intro-band-points">
-          <div class="intro-point">
-            <i class="bi bi-laptop"></i>
-            <span>Flexible online learning</span>
+        <div class="mobile-slider-shell">
+          <button class="mobile-slider-arrow mobile-slider-arrow-prev" type="button" data-slider-prev="learner-path-grid" aria-label="Previous card">
+            <i class="bi bi-chevron-left"></i>
+          </button>
+
+          <div class="learner-path-grid mobile-swipe-grid" id="learner-path-grid">
+            <article class="learner-path-card learner-path-card-pink">
+              <div class="learner-path-icon"><i class="bi bi-balloon-heart"></i></div>
+              <h3>Primary tutoring</h3>
+              <p>Support with core subjects, confidence and steady progress from the early years through primary school.</p>
+            </article>
+
+            <article class="learner-path-card learner-path-card-violet">
+              <div class="learner-path-icon"><i class="bi bi-pencil"></i></div>
+              <h3>11+ tutoring</h3>
+              <p>Focused preparation for entrance exams, helping students strengthen core knowledge, technique and confidence.</p>
+            </article>
+
+            <article class="learner-path-card learner-path-card-gold">
+              <div class="learner-path-icon"><i class="bi bi-journal-check"></i></div>
+              <h3>SATs tutoring</h3>
+              <p>Targeted support to help students prepare calmly and effectively for Key Stage assessments.</p>
+            </article>
+
+            <article class="learner-path-card learner-path-card-navy">
+              <div class="learner-path-icon"><i class="bi bi-book-half"></i></div>
+              <h3>GCSE tutoring</h3>
+              <p>Structured subject support, revision guidance and exam preparation across a wide range of GCSE subjects.</p>
+            </article>
+
+            <article class="learner-path-card learner-path-card-softpink">
+              <div class="learner-path-icon"><i class="bi bi-mortarboard-fill"></i></div>
+              <h3>A-level tutoring</h3>
+              <p>Specialist tutoring for deeper subject knowledge, exam technique, essays and advanced problem-solving.</p>
+            </article>
+
+            <article class="learner-path-card learner-path-card-softviolet">
+              <div class="learner-path-icon"><i class="bi bi-briefcase"></i></div>
+              <h3>Adult learning</h3>
+              <p>Flexible support for adult learners returning to study, building skills or working towards personal or professional goals.</p>
+            </article>
           </div>
-          <div class="intro-point">
-            <i class="bi bi-people"></i>
-            <span>Different tutor styles and rates</span>
-          </div>
-          <div class="intro-point">
-            <i class="bi bi-bar-chart-line"></i>
-            <span>Support for progress and confidence</span>
-          </div>
+
+          <button class="mobile-slider-arrow mobile-slider-arrow-next" type="button" data-slider-next="learner-path-grid" aria-label="Next card">
+            <i class="bi bi-chevron-right"></i>
+          </button>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section spotlight-section">
-    <div class="container">
-      <div class="spotlight-grid">
-        <div class="spotlight-media">
-          <div class="spotlight-image-card">
-            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80" alt="Students learning together online">
-          </div>
-          <div class="spotlight-badge spotlight-badge-top">
-            <strong>Flexible online support</strong>
-            <span>Designed around level, subject and learning goals</span>
-          </div>
-          <div class="spotlight-badge spotlight-badge-bottom">
-            <strong>Growing UK network</strong>
-            <span>North Wales, Lincolnshire and Cumbria</span>
-          </div>
-        </div>
-
-        <div class="spotlight-copy">
-          <p class="section-kicker"><i class="bi bi-heart"></i> Personalised support</p>
-          <h2>Support shaped around each learner</h2>
+    <section class="section subjects-section">
+      <div class="container">
+        <div class="section-heading centre">
+          <p class="section-kicker"><i class="bi bi-journal-bookmark"></i> Subjects we cover</p>
+          <h2>Support across core subjects and key stages</h2>
           <p>
-            We match learners with tutors based on subject, level, goals and budget. Whether you are looking
-            for weekly tutoring, exam preparation, tutor work, or franchise information, our network is built
-            to make the process simple, supportive and effective.
+            From primary foundations to GCSE, A-level and adult learning, we support a wide range of subjects through tailored online tutoring.
           </p>
+        </div>
 
-          <div class="spotlight-stats">
-            <div class="spotlight-stat spotlight-stat-pink">One-to-one and group tutoring</div>
-            <div class="spotlight-stat spotlight-stat-violet">Support across Wales and the UK</div>
+        <div class="mobile-slider-shell">
+          <button class="mobile-slider-arrow mobile-slider-arrow-prev" type="button" data-slider-prev="subjects-grid" aria-label="Previous card">
+            <i class="bi bi-chevron-left"></i>
+          </button>
+
+          <div class="subjects-grid mobile-swipe-grid" id="subjects-grid">
+            <article class="subject-card subject-card-pink">
+              <div class="subject-icon"><i class="bi bi-calculator"></i></div>
+              <h3>Maths</h3>
+              <p>Primary maths, KS3, GCSE, A-level and exam-focused support.</p>
+            </article>
+
+            <article class="subject-card subject-card-violet">
+              <div class="subject-icon"><i class="bi bi-flask"></i></div>
+              <h3>Chemistry</h3>
+              <p>Clear explanations, calculations, revision support and practical understanding.</p>
+            </article>
+
+            <article class="subject-card subject-card-navy">
+              <div class="subject-icon"><i class="bi bi-activity"></i></div>
+              <h3>Biology</h3>
+              <p>Structured support for topic knowledge, terminology and exam technique.</p>
+            </article>
+
+            <article class="subject-card subject-card-gold">
+              <div class="subject-icon"><i class="bi bi-lightning-charge"></i></div>
+              <h3>Physics</h3>
+              <p>Step-by-step help with calculations, concepts and problem-solving skills.</p>
+            </article>
+
+            <article class="subject-card subject-card-softpink">
+              <div class="subject-icon"><i class="bi bi-book"></i></div>
+              <h3>English</h3>
+              <p>Language, literature, reading, writing structure and exam preparation.</p>
+            </article>
+
+            <article class="subject-card subject-card-softviolet">
+              <div class="subject-icon"><i class="bi bi-globe-europe-africa"></i></div>
+              <h3>Humanities</h3>
+              <p>History, geography and related subjects with personalised academic support.</p>
+            </article>
+
+            <article class="subject-card subject-card-softnavy">
+              <div class="subject-icon"><i class="bi bi-cash-stack"></i></div>
+              <h3>Economics</h3>
+              <p>Microeconomics, macroeconomics and essay support for older learners.</p>
+            </article>
+
+            <article class="subject-card subject-card-softgold">
+              <div class="subject-icon"><i class="bi bi-bank"></i></div>
+              <h3>Politics</h3>
+              <p>Topic understanding, argument structure and exam-focused discussion.</p>
+            </article>
+
+            <article class="subject-card subject-card-pink">
+              <div class="subject-icon"><i class="bi bi-translate"></i></div>
+              <h3>French</h3>
+              <p>Vocabulary, grammar, speaking confidence and written accuracy.</p>
+            </article>
+
+            <article class="subject-card subject-card-violet">
+              <div class="subject-icon"><i class="bi bi-pencil-square"></i></div>
+              <h3>11+ and SATs</h3>
+              <p>Targeted preparation for entrance exams, SATs and confidence building.</p>
+            </article>
           </div>
+
+          <button class="mobile-slider-arrow mobile-slider-arrow-next" type="button" data-slider-next="subjects-grid" aria-label="Next card">
+            <i class="bi bi-chevron-right"></i>
+          </button>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section learner-path-section">
-    <div class="container">
-      <div class="section-heading centre">
-        <p class="section-kicker"><i class="bi bi-signpost-split"></i> Who we support</p>
-        <h2>Support for every stage of learning</h2>
-        <p>
-          We support students and learners at different stages, from building strong foundations early on
-          to preparing for major exams and adult study goals.
-        </p>
+    <section class="section process-section">
+      <div class="container">
+        <div class="section-heading centre">
+          <p class="section-kicker"><i class="bi bi-diagram-3"></i> How tutoring works</p>
+          <h2>Tutoring built around the way you learn</h2>
+          <p>
+            We offer flexible online tutoring that fits around real schedules, real goals and real students.
+            Whether you want individual support or want to learn alongside others, we help you find the right setup.
+          </p>
+        </div>
+
+        <div class="process-grid">
+          <article class="process-step">
+            <div class="process-number">1</div>
+            <h3>Tell us what you need</h3>
+            <p>Share the subject, level, goals and preferred lesson format through the enquiry form.</p>
+          </article>
+
+          <article class="process-step">
+            <div class="process-number">2</div>
+            <h3>We recommend the right fit</h3>
+            <p>We match learners with tutors based on subject knowledge, teaching style and availability.</p>
+          </article>
+
+          <article class="process-step">
+            <div class="process-number">3</div>
+            <h3>Start lessons online</h3>
+            <p>Begin with one-to-one or group sessions designed around your goals and pace.</p>
+          </article>
+        </div>
       </div>
+    </section>
 
-      <div class="learner-path-grid">
-        <article class="learner-path-card learner-path-card-pink">
-          <div class="learner-path-icon"><i class="bi bi-balloon-heart"></i></div>
-          <h3>Primary tutoring</h3>
-          <p>Support with core subjects, confidence and steady progress from the early years through primary school.</p>
-        </article>
-
-        <article class="learner-path-card learner-path-card-violet">
-          <div class="learner-path-icon"><i class="bi bi-pencil"></i></div>
-          <h3>11+ tutoring</h3>
-          <p>Focused preparation for entrance exams, helping students strengthen core knowledge, technique and confidence.</p>
-        </article>
-
-        <article class="learner-path-card learner-path-card-gold">
-          <div class="learner-path-icon"><i class="bi bi-journal-check"></i></div>
-          <h3>SATs tutoring</h3>
-          <p>Targeted support to help students prepare calmly and effectively for Key Stage assessments.</p>
-        </article>
-
-        <article class="learner-path-card learner-path-card-navy">
-          <div class="learner-path-icon"><i class="bi bi-book-half"></i></div>
-          <h3>GCSE tutoring</h3>
-          <p>Structured subject support, revision guidance and exam preparation across a wide range of GCSE subjects.</p>
-        </article>
-
-        <article class="learner-path-card learner-path-card-softpink">
-          <div class="learner-path-icon"><i class="bi bi-mortarboard-fill"></i></div>
-          <h3>A-level tutoring</h3>
-          <p>Specialist tutoring for deeper subject knowledge, exam technique, essays and advanced problem-solving.</p>
-        </article>
-
-        <article class="learner-path-card learner-path-card-softviolet">
-          <div class="learner-path-icon"><i class="bi bi-briefcase"></i></div>
-          <h3>Adult learning</h3>
-          <p>Flexible support for adult learners returning to study, building skills or working towards personal or professional goals.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section subjects-section">
-    <div class="container">
-      <p class="section-kicker"><i class="bi bi-journal-bookmark"></i> Subjects we cover</p>
-      <h2 class="section-title">Support across core subjects and key stages</h2>
-      <p class="section-lead">
-        From primary foundations to GCSE, A-level and adult learning, we support a wide range of subjects through tailored online tutoring.
+ <section class="section why-section">
+  <div class="container">
+    <div class="section-heading centre">
+      <p class="section-kicker"><i class="bi bi-patch-check"></i> Why choose us</p>
+      <h2>Why students and families choose North Wales Tutoring Group</h2>
+      <p>
+        Choosing the right tutor is about more than finding someone who knows the subject.
+        It is about finding support that suits the learner, works with your schedule and helps build real progress over time.
       </p>
-
-      <div class="subjects-grid">
-        <article class="subject-card subject-card-pink">
-          <div class="subject-icon"><i class="bi bi-calculator"></i></div>
-          <h3>Maths</h3>
-          <p>Primary maths, KS3, GCSE, A-level and exam-focused support.</p>
-        </article>
-
-        <article class="subject-card subject-card-violet">
-          <div class="subject-icon"><i class="bi bi-flask"></i></div>
-          <h3>Chemistry</h3>
-          <p>Clear explanations, calculations, revision support and practical understanding.</p>
-        </article>
-
-        <article class="subject-card subject-card-navy">
-          <div class="subject-icon"><i class="bi bi-activity"></i></div>
-          <h3>Biology</h3>
-          <p>Structured support for topic knowledge, terminology and exam technique.</p>
-        </article>
-
-        <article class="subject-card subject-card-gold">
-          <div class="subject-icon"><i class="bi bi-lightning-charge"></i></div>
-          <h3>Physics</h3>
-          <p>Step-by-step help with calculations, concepts and problem-solving skills.</p>
-        </article>
-
-        <article class="subject-card subject-card-softpink">
-          <div class="subject-icon"><i class="bi bi-book"></i></div>
-          <h3>English</h3>
-          <p>Language, literature, reading, writing structure and exam preparation.</p>
-        </article>
-
-        <article class="subject-card subject-card-softviolet">
-          <div class="subject-icon"><i class="bi bi-globe-europe-africa"></i></div>
-          <h3>Humanities</h3>
-          <p>History, geography and related subjects with personalised academic support.</p>
-        </article>
-
-        <article class="subject-card subject-card-softnavy">
-          <div class="subject-icon"><i class="bi bi-cash-stack"></i></div>
-          <h3>Economics</h3>
-          <p>Microeconomics, macroeconomics and essay support for older learners.</p>
-        </article>
-
-        <article class="subject-card subject-card-softgold">
-          <div class="subject-icon"><i class="bi bi-bank"></i></div>
-          <h3>Politics</h3>
-          <p>Topic understanding, argument structure and exam-focused discussion.</p>
-        </article>
-
-        <article class="subject-card subject-card-pink">
-          <div class="subject-icon"><i class="bi bi-translate"></i></div>
-          <h3>French</h3>
-          <p>Vocabulary, grammar, speaking confidence and written accuracy.</p>
-        </article>
-
-        <article class="subject-card subject-card-violet">
-          <div class="subject-icon"><i class="bi bi-pencil-square"></i></div>
-          <h3>11+ and SATs</h3>
-          <p>Targeted preparation for entrance exams, SATs and confidence building.</p>
-        </article>
-      </div>
     </div>
-  </section>
 
-  <section class="section process-section">
-    <div class="container">
-      <div class="section-heading centre">
-        <p class="section-kicker"><i class="bi bi-diagram-3"></i> How tutoring works</p>
-        <h2>Tutoring built around the way you learn</h2>
-        <p>
-          We offer flexible online tutoring that fits around real schedules, real goals and real students.
-          Whether you want individual support or want to learn alongside others, we help you find the right setup.
-        </p>
-      </div>
+    <div class="mobile-slider-shell">
+      <button class="mobile-slider-arrow mobile-slider-arrow-prev" type="button" data-slider-prev="why-grid" aria-label="Previous card">
+        <i class="bi bi-chevron-left"></i>
+      </button>
 
-      <div class="process-grid">
-        <article class="process-step">
-          <div class="process-number">1</div>
-          <h3>Tell us what you need</h3>
-          <p>Share the subject, level, goals and preferred lesson format through the enquiry form.</p>
-        </article>
-
-        <article class="process-step">
-          <div class="process-number">2</div>
-          <h3>We recommend the right fit</h3>
-          <p>We match learners with tutors based on subject knowledge, teaching style and availability.</p>
-        </article>
-
-        <article class="process-step">
-          <div class="process-number">3</div>
-          <h3>Start lessons online</h3>
-          <p>Begin with one-to-one or group sessions designed around your goals and pace.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section why-section">
-    <div class="container">
-      <div class="section-heading centre">
-        <p class="section-kicker"><i class="bi bi-patch-check"></i> Why choose us</p>
-        <h2>Why students and families choose North Wales Tutoring Group</h2>
-        <p>
-          Choosing the right tutor is about more than finding someone who knows the subject.
-          It is about finding support that suits the learner, works with your schedule and helps build real progress over time.
-        </p>
-      </div>
-
-      <div class="why-grid">
+      <div class="why-grid mobile-swipe-grid mobile-centre-cards" id="why-grid">
         <article class="why-card">
           <div class="why-icon"><i class="bi bi-grid-1x2"></i></div>
           <h3>Wide subject coverage</h3>
@@ -350,288 +379,420 @@
           <p>Learn from home with flexible online tutoring that works around busy family life.</p>
         </article>
       </div>
+
+      <button class="mobile-slider-arrow mobile-slider-arrow-next" type="button" data-slider-next="why-grid" aria-label="Next card">
+        <i class="bi bi-chevron-right"></i>
+      </button>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="section branches-section">
-    <div class="container">
-      <div class="section-heading centre">
-        <p class="section-kicker"><i class="bi bi-buildings"></i> Our network</p>
-        <h2>Our tutoring network</h2>
-        <p>
-          North Wales Tutoring Group is growing through a strong network of tutoring brands, each focused
-          on delivering personalised online support with the backing of a wider group.
-        </p>
-      </div>
-
-      <div class="branches-grid">
-        <article class="branch-panel branch-panel-pink">
-          <span class="branch-tag">Wales</span>
-          <h3>North Wales Tutoring</h3>
-          <p>Supporting students across North Wales and now more widely across Wales with personalised online tutoring across a wide range of subjects.</p>
-          <a href="https://northwalestutoring.com/" target="_blank" rel="noopener" class="text-link">Visit website</a>
-        </article>
-
-        <article class="branch-panel branch-panel-violet">
-          <span class="branch-tag">England</span>
-          <h3>Lincolnshire Tutoring</h3>
-          <p>Online tutoring for students and families across Lincolnshire, backed by the wider tutor network of North Wales Tutoring Group.</p>
-          <a href="franchises.html" class="text-link">Visit website</a>
-        </article>
-
-        <article class="branch-panel branch-panel-gold">
-          <span class="branch-tag">England</span>
-          <h3>Cumbria Tutoring</h3>
-          <p>Flexible online tutoring across Cumbria, helping students connect with experienced tutors in key subjects.</p>
-          <a href="franchises.html" class="text-link">Visit website</a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section franchise-section">
-    <div class="container">
-      <div class="section-heading centre">
-        <p class="section-kicker"><i class="bi bi-rocket-takeoff"></i> Franchise opportunities</p>
-        <h2>Grow a tutoring franchise in your area</h2>
-        <p>
-          We are building a wider tutoring network across the UK and are looking for the right people to grow with us.
-          Our franchise model is designed to help you launch a local tutoring brand with practical support,
-          online infrastructure and access to an established tutor network.
-        </p>
-      </div>
-
-      <div class="franchise-grid">
-        <article class="franchise-card">
-          <i class="bi bi-window"></i>
-          <h3>Website, hosting and maintenance included</h3>
-          <p>We build, host and maintain your website as part of the franchise support.</p>
-        </article>
-        <article class="franchise-card">
-          <i class="bi bi-geo-alt"></i>
-          <h3>Local area targeting</h3>
-          <p>We help position your franchise to reach families and students in your chosen area.</p>
-        </article>
-        <article class="franchise-card">
-          <i class="bi bi-people-fill"></i>
-          <h3>Access to our tutor network</h3>
-          <p>Our wider tutor group can help support learners in your area as your franchise grows.</p>
-        </article>
-        <article class="franchise-card">
-          <i class="bi bi-graph-up-arrow"></i>
-          <h3>Earn from lessons in your area</h3>
-          <p>Franchise partners receive a percentage from lessons conducted through their local brand.</p>
-        </article>
-        <article class="franchise-card">
-          <i class="bi bi-life-preserver"></i>
-          <h3>Ongoing support</h3>
-          <p>You benefit from continued guidance as you build and grow your tutoring presence.</p>
-        </article>
-        <article class="franchise-card">
-          <i class="bi bi-link-45deg"></i>
-          <h3>Content and visibility support</h3>
-          <p>Our wider group content and blog strategy can help strengthen visibility and support internal linking across the network.</p>
-        </article>
-      </div>
-
-      <div class="section-cta centre">
-        <a href="contact.html" class="btn btn-primary">Enquire about franchise opportunities</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section steps-section">
-    <div class="container">
-      <div class="section-heading centre">
-        <p class="section-kicker"><i class="bi bi-map"></i> How it works</p>
-        <h2>How the franchise model works</h2>
-      </div>
-
-      <div class="steps-grid steps-grid-refined">
-        <div class="step-card"><span>01</span><h3>Choose your area</h3></div>
-        <div class="step-card"><span>02</span><h3>We help launch your local tutoring website and online presence</h3></div>
-        <div class="step-card"><span>03</span><h3>You benefit from our tutor network, systems and support</h3></div>
-        <div class="step-card"><span>04</span><h3>You grow your local tutoring brand and earn from lessons in your area</h3></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section blog-section">
-    <div class="container">
-      <div class="section-heading centre">
-        <p class="section-kicker"><i class="bi bi-chat-left-text"></i> Blog</p>
-        <h2>Advice, subject guides and tutoring insights</h2>
-        <p>
-          Our blog is designed to support students, families and learners while also helping strengthen the visibility
-          of our tutoring network across the UK. We publish helpful content on subjects, revision, exam support and
-          tutoring topics, with articles that also connect naturally to our franchise websites.
-        </p>
-      </div>
-
-      <div class="blog-grid">
-        <article class="blog-feature-card">
-          <div class="blog-image">
-            <img src="https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=1000&q=80" alt="Student revising">
-          </div>
-          <div class="blog-badge">GCSE</div>
-          <h3>How to revise more effectively for GCSE exams</h3>
-          <p>Simple revision habits, planning tips and tutoring support ideas for students who want more structure.</p>
-        </article>
-
-        <article class="blog-feature-card">
-          <div class="blog-image">
-            <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1000&q=80" alt="Books and study materials">
-          </div>
-          <div class="blog-badge">A-level</div>
-          <h3>What makes a good A-level tutor?</h3>
-          <p>Key things parents and students should look for when choosing subject support at a higher level.</p>
-        </article>
-
-        <article class="blog-feature-card">
-          <div class="blog-image">
-            <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=1000&q=80" alt="Student learning online">
-          </div>
-          <div class="blog-badge">Online tutoring</div>
-          <h3>One-to-one or group tutoring: which is better?</h3>
-          <p>A helpful comparison for families, siblings and friends choosing the right tutoring format.</p>
-        </article>
-      </div>
-
-      <div class="section-cta centre">
-        <a href="blog.html" class="btn btn-outline">Explore the blog</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section faq-section">
-    <div class="container narrow">
-      <div class="section-heading centre">
-        <p class="section-kicker"><i class="bi bi-question-circle"></i> Frequently asked questions</p>
-        <h2>Frequently asked questions</h2>
-      </div>
-
-      <div class="faq-list">
-        <article class="faq-item">
-          <button class="faq-question" type="button">
-            <span>Do you offer online tutoring across the UK?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>Yes. We provide online tutoring for students and adult learners across Wales, England and the wider UK.</p>
-          </div>
-        </article>
-
-        <article class="faq-item">
-          <button class="faq-question" type="button">
-            <span>What levels do you cover?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>We support primary, 11+, SATs, GCSE, A-level and adult learners.</p>
-          </div>
-        </article>
-
-        <article class="faq-item">
-          <button class="faq-question" type="button">
-            <span>What subjects do you cover?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>We currently offer support in Science, Maths, English Language and Literature, Humanities, Economics, Politics, French, Spanish and Health &amp; Social Care.</p>
-          </div>
-        </article>
-
-        <article class="faq-item">
-          <button class="faq-question" type="button">
-            <span>Do you offer one-to-one and group tutoring?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>Yes. We offer one-to-one tutoring as well as group tutoring. Families, siblings and friends can build their own group, and we will match them with the right tutor.</p>
-          </div>
-        </article>
-
-        <article class="faq-item">
-          <button class="faq-question" type="button">
-            <span>Can I join as a franchise in my area?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>Yes. We are growing our tutoring network and welcome enquiries from people interested in building a franchise in their local area.</p>
-          </div>
-        </article>
-
-        <article class="faq-item">
-          <button class="faq-question" type="button">
-            <span>How can I contact North Wales Tutoring Group?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>You can contact us by email at enquiry@nwttutoring.com or by WhatsApp on +44 7480 231362.</p>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section final-form-section">
-    <div class="container">
-      <div class="bottom-form-shell">
-        <div class="bottom-form-copy">
-          <p class="section-kicker"><i class="bi bi-chat-dots"></i> Get in touch</p>
-          <h2>Looking for tutoring, franchise details, or tutor opportunities?</h2>
+    <section class="section branches-section">
+      <div class="container">
+        <div class="section-heading centre">
+          <p class="section-kicker"><i class="bi bi-buildings"></i> Our network</p>
+          <h2>Our tutoring network</h2>
           <p>
-            Use the form below and we will direct your enquiry to the right part of our team.
+            North Wales Tutoring Group is growing through a strong network of tutoring brands, each focused
+            on delivering personalised online support with the backing of a wider group.
           </p>
         </div>
 
-        <div class="glass-form-card glass-form-card-secondary">
-          <form class="enquiry-form" data-web3form id="bottomEnquiryForm">
-            <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
-            <input type="hidden" name="subject" value="New website enquiry from North Wales Tutoring Group">
-            <input type="hidden" name="from_name" value="North Wales Tutoring Group Website">
-            <input type="checkbox" name="botcheck" class="hidden-botcheck" tabindex="-1" autocomplete="off">
+        <div class="branches-grid">
+          <article class="branch-panel branch-panel-pink">
+            <span class="branch-tag">Wales</span>
+            <h3>North Wales Tutoring</h3>
+            <p>Supporting students across North Wales and now more widely across Wales with personalised online tutoring across a wide range of subjects.</p>
+            <a href="https://northwalestutoring.com/" target="_blank" rel="noopener" class="text-link">Visit website</a>
+          </article>
 
-            <div class="form-grid">
-              <div class="form-field">
-                <label for="bottom-full-name">Full name</label>
-                <input type="text" id="bottom-full-name" name="full_name" required>
-              </div>
+          <article class="branch-panel branch-panel-violet">
+            <span class="branch-tag">England</span>
+            <h3>Lincolnshire Tutoring</h3>
+            <p>Online tutoring for students and families across Lincolnshire, backed by the wider tutor network of North Wales Tutoring Group.</p>
+            <a href="franchises.html" class="text-link">Visit website</a>
+          </article>
 
-              <div class="form-field">
-                <label for="bottom-email">Email address</label>
-                <input type="email" id="bottom-email" name="email" required>
-              </div>
-
-              <div class="form-field">
-                <label for="bottom-phone">Phone number</label>
-                <input type="tel" id="bottom-phone" name="phone" required>
-              </div>
-
-              <div class="form-field">
-                <label for="bottom-enquiry-type">Enquiry type</label>
-                <select id="bottom-enquiry-type" name="enquiry_type" required>
-                  <option value="">Please choose</option>
-                  <option value="Tutoring support">Tutoring support</option>
-                  <option value="Franchise information">Franchise information</option>
-                  <option value="Join as a tutor">Want to join as a tutor</option>
-                </select>
-              </div>
-
-              <div class="form-field form-field-full">
-                <label for="bottom-message">Message</label>
-                <textarea id="bottom-message" name="message" rows="5" required></textarea>
-              </div>
-            </div>
-
-            <button type="submit" class="btn form-submit-btn">Speak With Our Team</button>
-            <p class="form-status" id="bottomFormStatus" aria-live="polite"></p>
-          </form>
+          <article class="branch-panel branch-panel-gold">
+            <span class="branch-tag">England</span>
+            <h3>Cumbria Tutoring</h3>
+            <p>Flexible online tutoring across Cumbria, helping students connect with experienced tutors in key subjects.</p>
+            <a href="franchises.html" class="text-link">Visit website</a>
+          </article>
         </div>
       </div>
+    </section>
+
+     <section class="section franchise-section">
+      <div class="container">
+        <div class="section-heading centre">
+          <p class="section-kicker"><i class="bi bi-rocket-takeoff"></i> Franchise opportunities</p>
+          <h2>Grow a tutoring franchise in your area</h2>
+          <p>
+            We are building a wider tutoring network across the UK and are looking for the right people to grow with us.
+            Our franchise model is designed to help you launch a local tutoring brand with practical support,
+            online infrastructure and access to an established tutor network.
+          </p>
+        </div>
+
+<div class="mobile-slider-shell">
+  <button class="mobile-slider-arrow mobile-slider-arrow-prev" type="button" data-slider-prev="franchise-grid" aria-label="Previous card">
+    <i class="bi bi-chevron-left"></i>
+  </button>
+
+  <div class="franchise-grid mobile-swipe-grid mobile-centre-cards" id="franchise-grid">
+    <article class="franchise-card">
+      <i class="bi bi-window"></i>
+      <h3>Website, hosting and maintenance included</h3>
+      <p>We build, host and maintain your website as part of the franchise support.</p>
+    </article>
+    <article class="franchise-card">
+      <i class="bi bi-geo-alt"></i>
+      <h3>Local area targeting</h3>
+      <p>We help position your franchise to reach families and students in your chosen area.</p>
+    </article>
+    <article class="franchise-card">
+      <i class="bi bi-people-fill"></i>
+      <h3>Access to our tutor network</h3>
+      <p>Our wider tutor group can help support learners in your area as your franchise grows.</p>
+    </article>
+    <article class="franchise-card">
+      <i class="bi bi-graph-up-arrow"></i>
+      <h3>Earn from lessons in your area</h3>
+      <p>Franchise partners receive a percentage from lessons conducted through their local brand.</p>
+    </article>
+    <article class="franchise-card">
+      <i class="bi bi-life-preserver"></i>
+      <h3>Ongoing support</h3>
+      <p>You benefit from continued guidance as you build and grow your tutoring presence.</p>
+    </article>
+    <article class="franchise-card">
+      <i class="bi bi-link-45deg"></i>
+      <h3>Content and visibility support</h3>
+      <p>Our wider group content and blog strategy can help strengthen visibility and support internal linking across the network.</p>
+    </article>
+  </div>
+
+  <button class="mobile-slider-arrow mobile-slider-arrow-next" type="button" data-slider-next="franchise-grid" aria-label="Next card">
+    <i class="bi bi-chevron-right"></i>
+  </button>
+</div>
+
+<div class="section-cta centre">
+          <a href="contact.html" class="btn btn-primary">Enquire about franchise opportunities</a>
+        </div>
+      </div>
+    </section>
+
+<section class="section steps-section">
+  <div class="container">
+    <div class="section-heading centre">
+      <p class="section-kicker"><i class="bi bi-map"></i> How it works</p>
+      <h2>How the franchise model works</h2>
     </div>
-  </section>
-</main>
+
+    <div class="mobile-slider-shell">
+      <button class="mobile-slider-arrow mobile-slider-arrow-prev" type="button" data-slider-prev="steps-grid" aria-label="Previous card">
+        <i class="bi bi-chevron-left"></i>
+      </button>
+
+      <div class="steps-grid steps-grid-refined mobile-swipe-grid mobile-centre-cards" id="steps-grid">
+        <div class="step-card">
+          <span>01</span>
+          <h3>Choose your area</h3>
+        </div>
+        <div class="step-card">
+          <span>02</span>
+          <h3>We help launch your local tutoring website and online presence</h3>
+        </div>
+        <div class="step-card">
+          <span>03</span>
+          <h3>You benefit from our tutor network, systems and support</h3>
+        </div>
+        <div class="step-card">
+          <span>04</span>
+          <h3>You grow your local tutoring brand and earn from lessons in your area</h3>
+        </div>
+      </div>
+
+      <button class="mobile-slider-arrow mobile-slider-arrow-next" type="button" data-slider-next="steps-grid" aria-label="Next card">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </div>
+</section>
+
+    <section class="section blog-section">
+      <div class="container">
+        <div class="section-heading centre">
+          <p class="section-kicker"><i class="bi bi-chat-left-text"></i> Blog</p>
+          <h2>Advice, subject guides and tutoring insights</h2>
+          <p>
+            Our blog is designed to support students, families and learners while also helping strengthen the visibility
+            of our tutoring network across the UK. We publish helpful content on subjects, revision, exam support and
+            tutoring topics, with articles that also connect naturally to our franchise websites.
+          </p>
+        </div>
+
+        <div class="blog-grid">
+          <article class="blog-feature-card">
+            <div class="blog-image">
+              <img src="https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=1000&q=80" alt="Student revising">
+            </div>
+            <div class="blog-badge">GCSE</div>
+            <h3>How to revise more effectively for GCSE exams</h3>
+            <p>Simple revision habits, planning tips and tutoring support ideas for students who want more structure.</p>
+          </article>
+
+          <article class="blog-feature-card">
+            <div class="blog-image">
+              <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1000&q=80" alt="Books and study materials">
+            </div>
+            <div class="blog-badge">A-level</div>
+            <h3>What makes a good A-level tutor?</h3>
+            <p>Key things parents and students should look for when choosing subject support at a higher level.</p>
+          </article>
+
+          <article class="blog-feature-card">
+            <div class="blog-image">
+              <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=1000&q=80" alt="Student learning online">
+            </div>
+            <div class="blog-badge">Online tutoring</div>
+            <h3>One-to-one or group tutoring: which is better?</h3>
+            <p>A helpful comparison for families, siblings and friends choosing the right tutoring format.</p>
+          </article>
+        </div>
+
+        <div class="section-cta centre">
+          <a href="blog.html" class="btn btn-outline">Explore the blog</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq-section">
+      <div class="container narrow">
+        <div class="section-heading centre">
+          <p class="section-kicker"><i class="bi bi-question-circle"></i> Frequently asked questions</p>
+          <h2>Online tutoring FAQs</h2>
+          <p>
+            Find answers about online tutoring across Wales and the UK, the subjects and levels we cover, tutor applications,
+            franchise opportunities, lesson formats, and how to contact North Wales Tutoring Group.
+          </p>
+        </div>
+
+        <div class="faq-list">
+          <article class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>Do you offer online tutoring across Wales and the UK?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>
+                  Yes. North Wales Tutoring Group provides online tutoring across North Wales, wider Wales, England, and the UK.
+                  We support learners through flexible one-to-one and group online lessons, making it easier for families and adult
+                  learners to access high-quality tutoring wherever they are based. If you would like to enquire about tutoring,
+                  you can <a href="contact.html">contact our team here</a>, email us at
+                  <a href="mailto:enquiry@nwttutoring.com?subject=Tutoring%20Enquiry&body=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20your%20tutoring%20please.">enquiry@nwttutoring.com</a>,
+                  or message us on
+                  <a href="https://wa.me/447480231362?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20your%20tutoring%20please." target="_blank" rel="noopener">WhatsApp</a>.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>What levels do you cover for online tutoring?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>
+                  We offer online tutoring for primary, 11+, SATs, KS3, GCSE, A-level, and adult learners. Our aim is to provide
+                  accessible tutoring support for different ages, academic stages, and learning goals. Whether a student needs help
+                  building confidence, improving grades, preparing for exams, or strengthening subject knowledge, we work to match
+                  them with the right tutor and lesson format. To discuss the right level of support, please
+                  <a href="contact.html">visit our contact page</a>.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>What subjects do you cover?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>
+                  We currently offer tutoring in Maths, Science, English Language, English Literature, Humanities, Economics,
+                  Politics, French, Spanish, and Health &amp; Social Care. Subject availability can vary depending on tutor
+                  specialism and timetable, so if you are looking for a particular subject, exam board, or level, the best next
+                  step is to <a href="contact.html">send us an enquiry</a>. We will then recommend the most suitable tutoring
+                  support for your needs.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>Do you offer one-to-one and group tutoring?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>
+                  Yes. We offer one-to-one online tutoring as well as group tutoring. One-to-one tutoring is ideal for personalised
+                  support, focused exam preparation, and confidence building. Group tutoring can work well for siblings, friends,
+                  or learners who want to study together with a shared tutor. If you would like to discuss the best lesson format,
+                  please <a href="contact.html">get in touch here</a> and we will help guide you.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>How do I enquire about tutoring with North Wales Tutoring Group?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>
+                  You can enquire about tutoring by using our <a href="contact.html">contact page</a>, emailing
+                  <a href="mailto:enquiry@nwttutoring.com?subject=Tutoring%20Enquiry&body=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20your%20tutoring%20please.">enquiry@nwttutoring.com</a>,
+                  or sending us a message on
+                  <a href="https://wa.me/447480231362?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20your%20tutoring%20please." target="_blank" rel="noopener">WhatsApp</a>.
+                  To help us match you with the right tutor, it is useful to include the student’s level, subject, preferred day
+                  and time, and any goals or topics they would like to cover.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>Can I join as a franchise in my area?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>
+                  Yes. We are growing our tutoring network and welcome enquiries from people interested in building a tutoring
+                  franchise in their local area. Our franchise model is designed for those who want to grow a local tutoring brand
+                  with website support, online infrastructure, and access to a wider tutor network. If you would like to know more
+                  about joining the franchise, please visit our <a href="contact.html">contact page</a>, email
+                  <a href="mailto:enquiry@nwttutoring.com?subject=Franchise%20Enquiry&body=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20joining%20the%20franchise%20please.">enquiry@nwttutoring.com</a>,
+                  or message us on
+                  <a href="https://wa.me/447480231362?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20joining%20the%20franchise%20please." target="_blank" rel="noopener">WhatsApp</a>.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>How do I apply to join as a tutor?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>
+                  If you are interested in joining our tutor network, you can apply by getting in touch through our
+                  <a href="contact.html">contact page</a>, emailing
+                  <a href="mailto:enquiry@nwttutoring.com?subject=Tutor%20Application&body=Hi%2C%20I%27d%20like%20to%20apply%20as%20a%20tutor%20please.">enquiry@nwttutoring.com</a>,
+                  or sending us a message on
+                  <a href="https://wa.me/447480231362?text=Hi%2C%20I%27d%20like%20to%20apply%20as%20a%20tutor%20please." target="_blank" rel="noopener">WhatsApp</a>.
+                  When applying, it helps to include the subjects and levels you teach, your experience, your location, and your
+                  typical availability.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>Why choose North Wales Tutoring Group for online tutoring?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>
+                  North Wales Tutoring Group is built around accessible online tutoring, personalised support, and flexible options
+                  for different learners. We work with tutors from a range of academic and professional backgrounds, helping families
+                  and learners find suitable support across different subjects, levels, and budgets. Our goal is to make the process
+                  simple, supportive, and effective for students across Wales and the wider UK. To start your enquiry, please
+                  <a href="contact.html">contact us here</a>.
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section final-form-section">
+      <div class="container">
+        <div class="bottom-form-shell">
+          <div class="bottom-form-copy">
+            <p class="section-kicker"><i class="bi bi-chat-dots"></i> Get in touch</p>
+            <h2>Looking for tutoring, franchise details, or tutor opportunities?</h2>
+            <p>
+              Use the form below and we will direct your enquiry to the right part of our team.
+            </p>
+          </div>
+
+          <div class="glass-form-card glass-form-card-secondary">
+            <form class="enquiry-form" data-web3form id="bottomEnquiryForm">
+              <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+              <input type="hidden" name="subject" value="New website enquiry from North Wales Tutoring Group">
+              <input type="hidden" name="from_name" value="North Wales Tutoring Group Website">
+              <input type="checkbox" name="botcheck" class="hidden-botcheck" tabindex="-1" autocomplete="off">
+
+              <div class="form-grid">
+                <div class="form-field">
+                  <label for="bottom-full-name">Full name</label>
+                  <input type="text" id="bottom-full-name" name="full_name" required>
+                </div>
+
+                <div class="form-field">
+                  <label for="bottom-email">Email address</label>
+                  <input type="email" id="bottom-email" name="email" required>
+                </div>
+
+                <div class="form-field">
+                  <label for="bottom-phone">Phone number</label>
+                  <input type="tel" id="bottom-phone" name="phone" required>
+                </div>
+
+                <div class="form-field">
+                  <label for="bottom-enquiry-type">Enquiry type</label>
+                  <select id="bottom-enquiry-type" name="enquiry_type" required>
+                    <option value="">Please choose</option>
+                    <option value="Tutoring support">Tutoring support</option>
+                    <option value="Franchise information">Franchise information</option>
+                    <option value="Join as a tutor">Want to join as a tutor</option>
+                  </select>
+                </div>
+
+                <div class="form-field form-field-full">
+                  <label for="bottom-message">Message</label>
+                  <textarea id="bottom-message" name="message" rows="5" required></textarea>
+                </div>
+              </div>
+
+              <button type="submit" class="btn form-submit-btn">Speak With Our Team</button>
+              <p class="form-status" id="bottomFormStatus" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
 
   <div id="site-footer"></div>
 

@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   initMobileNav();
   initFaq();
   initWeb3Forms();
+  initMobileSliders();
 });
 
 async function loadComponent(targetId, filePath) {
@@ -42,17 +43,29 @@ function initMobileNav() {
 function initFaq() {
   const faqItems = document.querySelectorAll(".faq-item");
 
-  faqItems.forEach((item) => {
+  faqItems.forEach((item, index) => {
     const button = item.querySelector(".faq-question");
-    if (!button) return;
+    const answer = item.querySelector(".faq-answer");
+
+    if (!button || !answer) return;
+
+    const answerId = `faq-answer-${index + 1}`;
+    button.setAttribute("aria-controls", answerId);
+    button.setAttribute("aria-expanded", "false");
+    answer.setAttribute("id", answerId);
 
     button.addEventListener("click", () => {
       const isActive = item.classList.contains("active");
 
-      faqItems.forEach((faq) => faq.classList.remove("active"));
+      faqItems.forEach((faq) => {
+        faq.classList.remove("active");
+        const faqButton = faq.querySelector(".faq-question");
+        if (faqButton) faqButton.setAttribute("aria-expanded", "false");
+      });
 
       if (!isActive) {
         item.classList.add("active");
+        button.setAttribute("aria-expanded", "true");
       }
     });
   });
@@ -74,7 +87,6 @@ function isValidPhone(phone) {
   if (digitCount < 8 || digitCount > 15) return false;
   if (hasTooManyRepeatedDigits(cleaned)) return false;
 
-  // Allows + at the start, then digits/spaces/brackets/hyphens in original input
   const phoneRegex = /^\+?[0-9()\-\s]+$/;
   return phoneRegex.test(phone);
 }
@@ -118,7 +130,9 @@ function initWeb3Forms() {
   const forms = document.querySelectorAll("form[data-web3form]");
 
   forms.forEach((form) => {
-    const statusEl = form.querySelector(".form-status") || document.getElementById(form.id === "heroEnquiryForm" ? "heroFormStatus" : "bottomFormStatus");
+    const statusEl =
+      form.querySelector(".form-status") ||
+      document.getElementById(form.id === "heroEnquiryForm" ? "heroFormStatus" : "bottomFormStatus");
 
     form.addEventListener("submit", async (event) => {
       event.preventDefault();
@@ -165,5 +179,100 @@ function initWeb3Forms() {
         if (submitButton) submitButton.disabled = false;
       }
     });
+  });
+}
+
+function initMobileSliders() {
+  document.querySelectorAll("[data-slider-prev]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const targetId = button.getAttribute("data-slider-prev");
+      const target = document.getElementById(targetId);
+      if (!target) return;
+
+      target.scrollBy({
+        left: -target.clientWidth,
+        behavior: "smooth"
+      });
+    });
+  });
+
+  document.querySelectorAll("[data-slider-next]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const targetId = button.getAttribute("data-slider-next");
+      const target = document.getElementById(targetId);
+      if (!target) return;
+
+      target.scrollBy({
+        left: target.clientWidth,
+        behavior: "smooth"
+      });
+    });
+  });
+}
+
+function initMobileSliders() {
+  const sliderIds = new Set();
+
+  document.querySelectorAll("[data-slider-prev], [data-slider-next]").forEach((button) => {
+    const targetId =
+      button.getAttribute("data-slider-prev") ||
+      button.getAttribute("data-slider-next");
+
+    if (targetId) sliderIds.add(targetId);
+  });
+
+  sliderIds.forEach((targetId) => {
+    const slider = document.getElementById(targetId);
+    if (!slider) return;
+
+    const prevButton = document.querySelector(`[data-slider-prev="${targetId}"]`);
+    const nextButton = document.querySelector(`[data-slider-next="${targetId}"]`);
+
+    const getCardWidth = () => {
+      const firstCard = slider.querySelector(".tutor-card, .testimonial-card, .area-card, article, .card");
+      if (!firstCard) return slider.clientWidth;
+
+      const sliderStyles = window.getComputedStyle(slider);
+      const gap = parseFloat(sliderStyles.columnGap || sliderStyles.gap || 0);
+      return firstCard.getBoundingClientRect().width + gap;
+    };
+
+    const getCardsPerView = () => {
+      const styles = window.getComputedStyle(slider);
+      const perView = parseInt(styles.getPropertyValue("--tutors-per-view"), 10);
+      return Number.isNaN(perView) ? 1 : perView;
+    };
+
+    const scrollByPage = (direction) => {
+      const cardWidth = getCardWidth();
+      const cardsPerView = getCardsPerView();
+      const amount = cardWidth * cardsPerView * direction;
+
+      slider.scrollBy({
+        left: amount,
+        behavior: "smooth"
+      });
+    };
+
+    const updateArrows = () => {
+      if (!prevButton || !nextButton) return;
+
+      const maxScrollLeft = slider.scrollWidth - slider.clientWidth;
+      prevButton.disabled = slider.scrollLeft <= 5;
+      nextButton.disabled = slider.scrollLeft >= maxScrollLeft - 5;
+    };
+
+    if (prevButton) {
+      prevButton.addEventListener("click", () => scrollByPage(-1));
+    }
+
+    if (nextButton) {
+      nextButton.addEventListener("click", () => scrollByPage(1));
+    }
+
+    slider.addEventListener("scroll", updateArrows);
+    window.addEventListener("resize", updateArrows);
+
+    updateArrows();
   });
 }
