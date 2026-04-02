@@ -132,7 +132,13 @@ function initWeb3Forms() {
   forms.forEach((form) => {
     const statusEl =
       form.querySelector(".form-status") ||
-      document.getElementById(form.id === "heroEnquiryForm" ? "heroFormStatus" : "bottomFormStatus");
+      document.getElementById(
+        form.id === "heroEnquiryForm"
+          ? "heroFormStatus"
+          : form.id === "contactEnquiryForm"
+          ? "contactFormStatus"
+          : "bottomFormStatus"
+      );
 
     form.addEventListener("submit", async (event) => {
       event.preventDefault();
@@ -144,6 +150,16 @@ function initWeb3Forms() {
       if (validationError) {
         statusEl.textContent = validationError;
         statusEl.style.color = "#b42318";
+
+        if (typeof Swal !== "undefined") {
+          Swal.fire({
+            icon: "error",
+            title: "Please check your form",
+            text: validationError,
+            confirmButtonColor: "#fd46c1"
+          });
+        }
+
         return;
       }
 
@@ -167,14 +183,48 @@ function initWeb3Forms() {
           statusEl.textContent = "Thank you. Your enquiry has been sent successfully.";
           statusEl.style.color = "#157347";
           form.reset();
+
+          if (typeof Swal !== "undefined") {
+           Swal.fire({
+  icon: "success",
+  title: "Thank you!",
+  html: "We’ve received your enquiry.<br>Our team will be in touch with you soon.",
+  confirmButtonText: "Close",
+  confirmButtonColor: "#fd46c1",
+  background: "#ffffff",
+  color: "#1d1d1f"
+});
+          }
         } else {
-          statusEl.textContent = result.message || "Something went wrong. Please try again.";
+          const errorMessage =
+            result.message || "Something went wrong. Please try again.";
+
+          statusEl.textContent = errorMessage;
           statusEl.style.color = "#b42318";
+
+          if (typeof Swal !== "undefined") {
+            Swal.fire({
+              icon: "error",
+              title: "Something went wrong",
+              text: errorMessage,
+              confirmButtonColor: "#fd46c1"
+            });
+          }
         }
       } catch (error) {
-        statusEl.textContent = "There was a problem sending your enquiry. Please try again.";
+        statusEl.textContent =
+          "There was a problem sending your enquiry. Please try again.";
         statusEl.style.color = "#b42318";
         console.error(error);
+
+        if (typeof Swal !== "undefined") {
+          Swal.fire({
+            icon: "error",
+            title: "Unable to send enquiry",
+            text: "There was a problem sending your enquiry. Please try again.",
+            confirmButtonColor: "#fd46c1"
+          });
+        }
       } finally {
         if (submitButton) submitButton.disabled = false;
       }
