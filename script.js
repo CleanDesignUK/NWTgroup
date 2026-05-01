@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   initFaq();
   initWeb3Forms();
   initMobileSliders();
+  initCookieBanner();
 });
 
 async function loadComponent(targetId, filePath) {
@@ -325,4 +326,57 @@ function initMobileSliders() {
 
     updateArrows();
   });
+}
+
+function initCookieBanner() {
+  if (document.getElementById("cookie-banner")) return;
+
+  const COOKIE_KEY = "nwtt_cookie_consent";
+
+  const banner = document.createElement("div");
+  banner.id = "cookie-banner";
+  banner.className = "cookie-banner";
+  banner.setAttribute("aria-live", "polite");
+  banner.setAttribute("aria-label", "Cookie consent banner");
+
+  banner.innerHTML = `
+    <div class="cookie-banner__inner">
+      <p class="cookie-banner__text">
+        🍪 We use cookies to improve your browsing experience, deliver personalised content, and analyse our traffic.
+        By clicking “Accept All”, you consent to our use of cookies.
+        See our <a href="/cookie-policy.html">Cookie Policy</a> for details.
+      </p>
+      <div class="cookie-banner__actions">
+        <button type="button" class="cookie-btn cookie-btn--accept" id="cookie-accept">Accept All 🍪</button>
+        <button type="button" class="cookie-btn cookie-btn--decline" id="cookie-decline">Decline</button>
+      </div>
+    </div>
+  `;
+
+  document.body.appendChild(banner);
+
+  const acceptBtn = document.getElementById("cookie-accept");
+  const declineBtn = document.getElementById("cookie-decline");
+
+  function showBanner() {
+    banner.classList.add("is-visible");
+  }
+
+  function hideBanner() {
+    banner.classList.remove("is-visible");
+  }
+
+  function setConsent(value) {
+    localStorage.setItem(COOKIE_KEY, value);
+    hideBanner();
+  }
+
+  const savedConsent = localStorage.getItem(COOKIE_KEY);
+
+  if (!savedConsent) {
+    setTimeout(showBanner, 350);
+  }
+
+  acceptBtn?.addEventListener("click", () => setConsent("accepted"));
+  declineBtn?.addEventListener("click", () => setConsent("declined"));
 }
