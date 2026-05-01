@@ -181,9 +181,20 @@ function initWeb3Forms() {
         const result = await response.json();
 
         if (result.success) {
-          statusEl.textContent = "Thank you. Your enquiry has been sent successfully.";
-          statusEl.style.color = "#157347";
-          form.reset();
+  const enquiryType = form.querySelector('[name="enquiry_type"]')?.value || "General enquiry";
+
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    event: "web3form_success",
+    form_id: form.id || "unknown_form",
+    enquiry_type: enquiryType,
+    page_path: window.location.pathname,
+    page_url: window.location.href
+  });
+
+  statusEl.textContent = "Thank you. Your enquiry has been sent successfully.";
+  statusEl.style.color = "#157347";
+  form.reset();
 
           if (typeof Swal !== "undefined") {
            Swal.fire({
